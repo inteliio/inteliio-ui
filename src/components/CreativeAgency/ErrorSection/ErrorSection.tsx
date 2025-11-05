@@ -11,17 +11,15 @@ const ErrorSection: React.FC = () => {
               <img src="/assets/imgs/404-animate.svg" alt="" />
             </div>
             <h2 className="mt-n3">Page Not Found</h2>
-            <p className="mt-3">
-              Sorry, the page you are looking for does not exist.
-            </p>
+            <p className="mt-3">Sorry, the page you are looking for does not exist.</p>
             <div className="t-btn-group mt-4">
-              <Link className="t-btn t-btn-circle" href="/creative-agency">
+              <Link className="t-btn t-btn-circle" href="/">
                 <i className="fa-solid fa-arrow-right"></i>
               </Link>
-              <Link className="t-btn t-btn-primary" href="/creative-agency">
+              <Link className="t-btn t-btn-primary" href="/">
                 Go Back Home
               </Link>
-              <Link className="t-btn t-btn-circle" href="/creative-agency">
+              <Link className="t-btn t-btn-circle" href="/">
                 <i className="fa-solid fa-arrow-right"></i>
               </Link>
             </div>

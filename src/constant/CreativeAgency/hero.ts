@@ -22,7 +22,7 @@ const hero: HeroData = {
   description: "inteliio, a digital agency crafted by a dedicated team of creatives champions the essence of simplicity and elegance.",
   cta: {
     text: "Let’s Connect",
-    href: "/creative-agency/contact",
+    href: "/contact",
   },
   shapes: {
     shape1: "/assets/imgs/shape/shape-18.webp",

@@ -41,15 +41,15 @@ export interface SidebarData {
 const sidebar: SidebarData = {
   logo: "/assets/inteliio/logo/inteliio-logo.svg",
   menus: [
-    { label: "Home", href: "/creative-agency" },
-    { label: "Services", href: "/creative-agency/services" },
-    { label: "Our Work", href: "/creative-agency/portfolio-grid" },
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "Our Work", href: "/portfolio-grid" },
     {
       label: "Company",
       children: [
-        { label: "About Us", href: "/creative-agency/about" },
-        { label: "FAQ", href: "/creative-agency/faq" },
-        { label: "Contact", href: "/creative-agency/contact" },
+        { label: "About Us", href: "/about" },
+        { label: "FAQ", href: "/faq" },
+        { label: "Contact", href: "/contact" },
       ],
     },
   ],
@@ -58,7 +58,7 @@ const sidebar: SidebarData = {
   description: "We offer comprehensive range of services to help your business thrive.",
   cta: {
     text: "Let’s Connect",
-    href: "/creative-agency/contact",
+    href: "/contact",
   },
   ctaIcon: "fa-solid fa-arrow-right",
   gallery: [],

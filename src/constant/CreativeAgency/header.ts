@@ -13,15 +13,15 @@ export interface HeaderData {
 const header: HeaderData = {
   logo: "/assets/inteliio/logo/inteliio-logo.svg",
   menu: [
-    { label: "Home", href: "/creative-agency" },
-    { label: "Services", href: "/creative-agency/services" },
-    { label: "Our Work", href: "/creative-agency/portfolio-grid" },
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "Our Work", href: "/portfolio-grid" },
     {
       label: "Company",
       children: [
-        { label: "About Us", href: "/creative-agency/about" },
-        { label: "FAQ", href: "/creative-agency/faq" },
-        { label: "Contact", href: "/creative-agency/contact" },
+        { label: "About Us", href: "/about" },
+        { label: "FAQ", href: "/faq" },
+        { label: "Contact", href: "/contact" },
       ],
     },
   ],

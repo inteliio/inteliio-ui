@@ -14,7 +14,7 @@ export interface AboutData {
 const about: AboutData = {
   subtitle: "",
   title: "Inteliio is where smart engineering meets vision.",
-  buttonLink: "/creative-agency/about",
+  buttonLink: "/about",
   buttonText: "About Us",
   counters: [
     { number: 5, suffix: "+", text: "Industries empowered" },

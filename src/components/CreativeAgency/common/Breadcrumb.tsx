@@ -31,7 +31,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ title, subTitle, pageName }) =>
             <div className="breadcrumb-wrapper fade-anim" data-direction="left" data-offset="100" data-delay="0.90">
               <ul className="breadcrumb">
                 <li>
-                  <Link href="/creative-agency">HOME</Link>
+                  <Link href="/">HOME</Link>
                 </li>
                 <li>{finalPageName}</li>
               </ul>

@@ -28,7 +28,7 @@ const workData: WorkData = {
       year: "2025",
       category: "WEB DEVELOPMENT // BRANDING DESIGN",
       image: "/assets/inteliio/projects/codelab/codelab.png",
-      link: "/creative-agency/portfolio-details",
+      link: "/portfolio-details",
     },
   ],
 };

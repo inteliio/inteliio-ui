@@ -9,38 +9,37 @@ export interface TextSliderData {
   slides: ITextSlide[];
 }
 
-
-const textSliderData:TextSliderData = {
+const textSliderData: TextSliderData = {
   slides: [
     {
       id: 1,
       text: "LET’S TALK",
-      href: "/creative-agency/contact",
-      img: "/assets/imgs/shape/shape-10.webp",
+      href: "/contact",
+      img: "/assets/imgs/shape/inteliio-color.svg",
     },
     {
       id: 2,
       text: "LET’S TALK",
-      href: "/creative-agency/contact",
-      img: "/assets/imgs/shape/shape-10.webp",
+      href: "/contact",
+      img: "/assets/imgs/shape/inteliio-color.svg",
     },
     {
       id: 3,
       text: "LET’S TALK",
-      href: "/creative-agency/contact",
-      img: "/assets/imgs/shape/shape-10.webp",
+      href: "/contact",
+      img: "/assets/imgs/shape/inteliio-color.svg",
     },
     {
       id: 4,
       text: "LET’S TALK",
-      href: "/creative-agency/contact",
-      img: "/assets/imgs/shape/shape-10.webp",
+      href: "/contact",
+      img: "/assets/imgs/shape/inteliio-color.svg",
     },
     {
       id: 5,
       text: "LET’S TALK",
-      href: "/creative-agency/contact",
-      img: "/assets/imgs/shape/shape-10.webp",
+      href: "/contact",
+      img: "/assets/imgs/shape/inteliio-color.svg",
     },
   ],
 };

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { IProject, WorkData } from "@/constant/CreativeAgency/workTwo";
 import NiceSelectWrapper from "@/components/CreativeAgency/NiceSelect/NiceSelectWrapper";
 import WorkSlider from "@/components/CreativeAgency/Portfolio/WorkSlider";
+import Image from "next/image";
 
 interface WorkProps {
   pageInner?: boolean;
@@ -12,12 +13,7 @@ interface WorkProps {
   data: WorkData;
 }
 
-const WorkSection: React.FC<WorkProps> = ({
-  pageInner,
-  pageInnerSlider,
-  type = false,
-  data: workData,
-}) => {
+const WorkSection: React.FC<WorkProps> = ({ pageInnerSlider, type = false, data: workData }) => {
   const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     // Sort by: ${e.target.value}
     console.log(e.target.value);
@@ -32,7 +28,7 @@ const WorkSection: React.FC<WorkProps> = ({
     return (
       <div className="section-header">
         <div className="meta fade-anim" suppressHydrationWarning={true}>
-          <p className="total-item">All showcases (32)</p>
+          <p className="total-item">All showcases ({workData.projects.length})</p>
         </div>
         <div className="filter-wrapper fade-anim" suppressHydrationWarning={true}>
           <div className="filter-box">
@@ -45,8 +41,7 @@ const WorkSection: React.FC<WorkProps> = ({
                 { value: "name", label: "Name" },
                 { value: "date", label: "Date" },
                 { value: "tag", label: "Tag" },
-              ]}
-            ></NiceSelectWrapper>
+              ]}></NiceSelectWrapper>
           </div>
           <div className="filter-box">
             <NiceSelectWrapper
@@ -60,8 +55,7 @@ const WorkSection: React.FC<WorkProps> = ({
                 { value: "design", label: "Design" },
                 { value: "mockup", label: "Mockup" },
                 { value: "branding", label: "Branding" },
-              ]}
-            ></NiceSelectWrapper>
+              ]}></NiceSelectWrapper>
           </div>
         </div>
       </div>
@@ -75,63 +69,107 @@ const WorkSection: React.FC<WorkProps> = ({
           <div className={`work-area-${type}-inner section-spacing`}>
             <WorkFilter />
             <div className="works-wrapper-box fade-anim" suppressHydrationWarning={true}>
-              <div className="works-wrapper">
+              <div
+                className="works-wrapper"
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
+                  gap: "40px",
+                  alignItems: "start",
+                }}>
                 {workData?.projects?.map((item, index) => (
-                  <div className={`work-box-${type} fade-anim`} key={item?.id} suppressHydrationWarning={true}>
-                    <div className="thumb">
-                      <div className="meta">
+                  <div
+                    className="work-box fade-anim"
+                    key={item?.id}
+                    suppressHydrationWarning={true}
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      height: "100%",
+                      borderRadius: "12px",
+                    }}>
+                    {/* Image */}
+                    <div
+                      className="thumb"
+                      style={{
+                        position: "relative",
+                        width: "100%",
+                        aspectRatio: "16 / 9",
+                        overflow: "hidden",
+                        borderRadius: "12px",
+                        boxShadow: "0 6px 18px rgba(0, 0, 0, 0.12)",
+                      }}>
+                      <div className="meta" style={{ position: "absolute", bottom: "12px", left: "12px", zIndex: 2 }}>
                         {item?.tags?.map((tag, idx) => (
-                          <span className="tag" key={idx}>
+                          <span
+                            className="tag"
+                            key={idx}
+                            style={{
+                              background: "rgba(0,0,0,0.5)",
+                              color: "#fff",
+                              padding: "2px 8px",
+                              borderRadius: "6px",
+                              fontSize: "12px",
+                              marginRight: "6px",
+                            }}>
                             {tag}
                           </span>
                         ))}
                       </div>
-                      <div className="img_anim_reveal" suppressHydrationWarning={true}>
-                        <Link href={item?.link || "#"}>
-                          <img
-                            src={item?.image}
-                            alt={item?.title || "Project image"}
-                          />
-                        </Link>
-                      </div>
+                      <Link href={item?.link || "#"} target="_blank" rel="noopener noreferrer">
+                        <Image
+                          src={item?.image}
+                          alt={item?.title || "Project image"}
+                          width={800}
+                          height={450}
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            borderRadius: "12px",
+                          }}
+                        />
+                      </Link>
                     </div>
-                    <div className="content">
-                      <span className={`number ${type === 7 ? "d-none" : ""}`}>
+
+                    {/* Content */}
+                    <div className="content" style={{ marginTop: "16px", textAlign: "left" }}>
+                      <span className={`number ${type === 7 ? "d-none" : ""}`} style={{ opacity: 0.6 }}>
                         {String(index + 1).padStart(2, "0")}
                         <span className="shape">/</span>
                       </span>
-                      <h3 className="title">
-                        <Link href={item?.link || "#"}>{item?.title}</Link>
+
+                      <h3
+                        className="title"
+                        style={{
+                          fontSize: "20px",
+                          fontWeight: 500,
+                          marginTop: "8px",
+                          marginBottom: "12px",
+                          lineHeight: 1.4,
+                        }}>
+                        <Link href={item?.link || "#"} target="_blank" rel="noopener noreferrer">
+                          {item?.title}
+                        </Link>
                       </h3>
+
                       <div
                         className={`t-btn-group ${type === 7 ? "d-none" : ""}`}
-                      >
-                        <Link
-                          className="t-btn t-btn-circle"
-                          href={item?.link || "#"}
-                        >
-                          <i className="fa-solid fa-arrow-right"></i>
-                        </Link>
-                        <Link
-                          className="t-btn t-btn-primary"
-                          href={item?.link || "#"}
-                        >
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "10px",
+                        }}>
+                        <Link className="t-btn t-btn-primary" href={item?.link || "#"} target="_blank" rel="noopener noreferrer">
                           View Full Project
-                        </Link>
-                        <Link
-                          className="t-btn t-btn-circle"
-                          href={item?.link || "#"}
-                        >
-                          <i className="fa-solid fa-arrow-right"></i>
                         </Link>
                       </div>
                     </div>
                   </div>
                 ))}
 
-                {!workData?.projects?.length && (
-                  <p>No projects available at this time.</p>
-                )}
+                {!workData?.projects?.length && <p>No projects available at this time.</p>}
               </div>
             </div>
           </div>
@@ -159,117 +197,11 @@ const WorkSection: React.FC<WorkProps> = ({
     );
   };
 
-  const WorkAreaMain = () => {
-    return (
-      <section className="work-area">
-        <div className="work-area-inner section-spacing">
-          <div className="container">
-            <div className="section-header">
-              <div className="section-title-wrapper fade-anim" suppressHydrationWarning={true}>
-                <div className="subtitle-wrapper">
-                  <span className="section-subtitle">
-                    {workData?.sectionSubtitle}
-                  </span>
-                </div>
-                <div className="title-wrapper">
-                  <h2 className="section-title">{workData?.sectionTitle}</h2>
-                </div>
-              </div>
-              <div className="btn-wrapper fade-anim" suppressHydrationWarning={true}>
-                <div className="t-btn-group">
-                  <Link
-                    className="t-btn t-btn-circle"
-                    href={workData?.viewAllLink || "#"}
-                  >
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </Link>
-                  <Link
-                    className="t-btn t-btn-primary"
-                    href={workData?.viewAllLink || "#"}
-                  >
-                    {workData?.viewAllText}
-                  </Link>
-                  <Link
-                    className="t-btn t-btn-circle"
-                    href={workData?.viewAllLink || "#"}
-                  >
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="works-wrapper-box fade-anim" suppressHydrationWarning={true}>
-            <div className="container">
-              <div className="works-wrapper">
-                {workData?.projects?.map((item: IProject, index: number) => (
-                  <div className="work-box-1 fade-anim" key={item?.id} suppressHydrationWarning={true}>
-                    <div className="thumb">
-                      <div className="meta">
-                        {item?.tags?.map((tag: string, idx: number) => (
-                          <span className="tag" key={idx}>
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="img_anim_reveal" suppressHydrationWarning={true}>
-                        <Link href={item?.link || "#"}>
-                          <img
-                            src={item?.image}
-                            alt={item?.title || "Project image"}
-                          />
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="content">
-                      <span className="number">
-                        {String(index + 1).padStart(2, "0")}
-                        <span className="shape">/</span>
-                      </span>
-                      <h3 className="title">
-                        <Link href={item?.link || "#"}>{item?.title}</Link>
-                      </h3>
-                      <div className="t-btn-group">
-                        <Link
-                          className="t-btn t-btn-circle"
-                          href={item?.link || "#"}
-                        >
-                          <i className="fa-solid fa-arrow-right"></i>
-                        </Link>
-                        <Link
-                          className="t-btn t-btn-primary"
-                          href={item?.link || "#"}
-                        >
-                          View Full Project
-                        </Link>
-                        <Link
-                          className="t-btn t-btn-circle"
-                          href={item?.link || "#"}
-                        >
-                          <i className="fa-solid fa-arrow-right"></i>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-
-                {!workData?.projects?.length && (
-                  <p>No projects available at this time.</p>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  };
-
   if (pageInnerSlider) {
     return <WorkAreaSlider />;
   }
 
-  return pageInner ? <WorkAreaInner /> : <WorkAreaMain />;
+  return <WorkAreaInner />;
 };
 
 export default WorkSection;

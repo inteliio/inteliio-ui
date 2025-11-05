@@ -7,15 +7,14 @@ interface ServicesProps {
   data: ServiceData[];
   type?: string;
 }
-const ServiceSection: React.FC<ServicesProps> = ({ data: servicesData,type }) => {
+const ServiceSection: React.FC<ServicesProps> = ({ data: servicesData, type }) => {
   const containerRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     containerRefs.current.forEach((container) => {
       if (!container) return;
 
-      const video =
-        container.querySelector<HTMLVideoElement>(".video_on_hover");
+      const video = container.querySelector<HTMLVideoElement>(".video_on_hover");
       if (!video) return;
 
       const handleMouseOver = () => video.play();
@@ -47,13 +46,13 @@ const ServiceSection: React.FC<ServicesProps> = ({ data: servicesData,type }) =>
             </div>
             <div className="btn-wrapper fade-anim" suppressHydrationWarning={true}>
               <div className="t-btn-group">
-                <Link className="t-btn t-btn-circle" href="/creative-agency/services">
+                <Link className="t-btn t-btn-circle" href="/services">
                   <i className="fa-solid fa-arrow-right"></i>
                 </Link>
-                <Link className="t-btn t-btn-primary" href="/creative-agency/services">
+                <Link className="t-btn t-btn-primary" href="/services">
                   Our Services
                 </Link>
-                <Link className="t-btn t-btn-circle" href="/creative-agency/services">
+                <Link className="t-btn t-btn-circle" href="/services">
                   <i className="fa-solid fa-arrow-right"></i>
                 </Link>
               </div>
@@ -71,8 +70,7 @@ const ServiceSection: React.FC<ServicesProps> = ({ data: servicesData,type }) =>
                 }}
                 className="service-box-3 fade-anim video-container"
                 data-delay={(0.3 + index * 0.15).toFixed(2)}
-                suppressHydrationWarning={true}
-              >
+                suppressHydrationWarning={true}>
                 <div className="container">
                   <div className="service-box-3-inner">
                     <div className="number">{service.number}</div>

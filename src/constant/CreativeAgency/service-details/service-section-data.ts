@@ -22,36 +22,25 @@ export interface IServiceData {
 const serviceData: IServiceData = {
   subtitle: "Our Services",
   title: "Overview of Web design and improvements",
-  description:
-    "Averto, a digital agency crafted by a dedicated team of creatives champions the essence of simplicity and elegance.",
+  description: "Averto, a digital agency crafted by a dedicated team of creatives champions the essence of simplicity and elegance.",
   buttons: [
     {
-      href: "/creative-agency/contact",
+      href: "/contact",
       style: "t-btn t-btn-circle",
       icon: "fa-solid fa-arrow-right",
     },
     {
-      href: "/creative-agency/contact",
+      href: "/contact",
       style: "t-btn t-btn-primary",
       label: "Get Started",
     },
     {
-      href: "/creative-agency/contact",
+      href: "/contact",
       style: "t-btn t-btn-circle",
       icon: "fa-solid fa-arrow-right",
     },
   ],
-  services: [
-    "UI/UX Design",
-    "Branding",
-    "Content Production",
-    "User Interface Design",
-    "Modern Animation",
-    "Brand Identity",
-    "User Interface",
-    "User Experience",
-    "Responsive Design",
-  ],
+  services: ["UI/UX Design", "Branding", "Content Production", "User Interface Design", "Modern Animation", "Brand Identity", "User Interface", "User Experience", "Responsive Design"],
   gallery: [
     {
       src: "/assets/imgs/gallery/image-52.webp",

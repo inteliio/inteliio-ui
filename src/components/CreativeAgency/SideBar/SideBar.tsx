@@ -21,7 +21,7 @@ const Sidebar = ({ isOpen, handleSidebar, menuClass = "d-xl-none" }: SideBarProp
             {/* Header */}
             <div className="offset-widget offset-header">
               <div className="offset-logo">
-                <Link href="/creative-agency">
+                <Link href="/">
                   <img src={sidebarData.logo} alt="site logo" />
                 </Link>
               </div>

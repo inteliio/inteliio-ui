@@ -24,7 +24,7 @@ interface HeaderData {
 }
 
 // --- TYPED DATA OBJECT ---
-const headerData:HeaderData = {
+const headerData: HeaderData = {
   logo: {
     href: "/ai-agency",
     src: "/assets/imgs/logo/logo.png",
@@ -33,13 +33,7 @@ const headerData:HeaderData = {
   menuItems: [
     {
       title: "Home",
-      children: [
-        { title: "Creative Agency", href: "/creative-agency" },
-        { title: "Design Agency", href: "/design-agency" },
-        { title: "Digital Agency", href: "/digital-agency" },
-        { title: "AI Agency", href: "/ai-agency" },
-        { title: "Marketing Agency", href: "/marketing-agency" },
-      ],
+      children: [{ title: "Creative Agency", href: "/" }],
     },
     { title: "About Us", href: "/ai-agency/about" },
     {
@@ -105,14 +99,9 @@ const Header: React.FC = () => {
 
   const renderMenu = (items: MenuItem[]): JSX.Element[] =>
     items.map((item, index) => (
-      <li
-        key={index}
-        className={item?.children ? "menu-item-has-children" : ""}
-      >
+      <li key={index} className={item?.children ? "menu-item-has-children" : ""}>
         <Link href={item?.href || "#0"}>{item?.title}</Link>
-        {item?.children && (
-          <ul className="dp-menu">{renderMenu(item?.children)}</ul>
-        )}
+        {item?.children && <ul className="dp-menu">{renderMenu(item?.children)}</ul>}
       </li>
     ));
 
@@ -125,37 +114,24 @@ const Header: React.FC = () => {
             <div className="header-area-4-inner">
               <div className="header-logo">
                 <Link href={headerData?.logo?.href}>
-                  <img
-                    src={headerData?.logo?.src}
-                    alt={headerData?.logo?.alt}
-                    className="normal-logo"
-                  />
+                  <img src={headerData?.logo?.src} alt={headerData?.logo?.alt} className="normal-logo" />
                 </Link>
               </div>
 
               <div className="header-nav pos-center">
                 <nav className="main-menu d-none d-xl-block">
-                  <ul className="flex space-x-6">
-                    {renderMenu(headerData?.menuItems)}
-                  </ul>
+                  <ul className="flex space-x-6">{renderMenu(headerData?.menuItems)}</ul>
                 </nav>
               </div>
 
               <div className="header-button">
-                <Link
-                  href={headerData?.cta?.href}
-                  className="t-btn t-btn-primary bg-active"
-                >
+                <Link href={headerData?.cta?.href} className="t-btn t-btn-primary bg-active">
                   {headerData?.cta?.label}
                 </Link>
               </div>
 
               <div className="header-offcanvas d-xl-none">
-                <button
-                  className="side-toggle"
-                  onClick={handleSidebar}
-                  aria-label="Toggle Sidebar"
-                >
+                <button className="side-toggle" onClick={handleSidebar} aria-label="Toggle Sidebar">
                   <img src="/assets/imgs/icon/icon-4.webp" alt="Toggle" />
                 </button>
               </div>

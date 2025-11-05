@@ -7,11 +7,9 @@ import { Autoplay } from "swiper/modules";
 interface TextSliderProps {
   data: TextSliderData;
 }
-const TextSliderSection: React.FC<TextSliderProps> = ({
-  data: textSliderData,
-}) => {
+const TextSliderSection: React.FC<TextSliderProps> = ({ data: textSliderData }) => {
   return (
-    <section className="text-slider-area">
+    <section className="text-slider-area" style={{ marginBottom: 50 }}>
       <div className="text-slider-box">
         <div className="text-slider fade-anim">
           <Swiper
@@ -24,8 +22,7 @@ const TextSliderSection: React.FC<TextSliderProps> = ({
             autoplay={{
               delay: 1,
               disableOnInteraction: false,
-            }}
-          >
+            }}>
             {textSliderData?.slides?.map((slide) => (
               <SwiperSlide key={slide?.id}>
                 <div className="text-slider-item">

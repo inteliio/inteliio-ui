@@ -38,7 +38,7 @@ const Header = () => {
             <div className="header-area-3-inner">
               {/* Logo */}
               <div className="header-logo">
-                <Link href="/creative-agency">
+                <Link href="/">
                   <img src={headerData?.logo} className="normal-logo" alt="Site Logo" />
                 </Link>
               </div>

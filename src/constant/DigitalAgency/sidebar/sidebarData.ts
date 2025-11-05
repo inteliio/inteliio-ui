@@ -45,7 +45,7 @@ const sidebar: SidebarData = {
     {
       label: "Home",
       children: [
-        { label: "Creative Agency", href: "/creative-agency" },
+        { label: "Creative Agency", href: "/" },
         { label: "Design Agency", href: "/design-agency" },
         { label: "Digital Agency", href: "/digital-agency" },
         { label: "AI Agency", href: "/ai-agency" },
@@ -105,19 +105,13 @@ const sidebar: SidebarData = {
   ],
   closeIcon: "fas fa-times",
   title: "Hello There!",
-  description:
-    "We offer comprehensive range of services to help your business thrive.",
+  description: "We offer comprehensive range of services to help your business thrive.",
   cta: {
     text: "Let’s Connect",
     href: "/digital-agency/contact",
   },
   ctaIcon: "fa-solid fa-arrow-right",
-  gallery: [
-    "/assets/imgs/gallery/image-48.webp",
-    "/assets/imgs/gallery/image-49.webp",
-    "/assets/imgs/gallery/image-50.webp",
-    "/assets/imgs/gallery/image-51.webp",
-  ],
+  gallery: ["/assets/imgs/gallery/image-48.webp", "/assets/imgs/gallery/image-49.webp", "/assets/imgs/gallery/image-50.webp", "/assets/imgs/gallery/image-51.webp"],
   contact: {
     phone: { text: "+2230 6965 119", href: "tel:+22306965119" },
     email: { text: "averto@gmail.com", href: "mailto:averto@gmail.com" },

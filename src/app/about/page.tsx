@@ -1,22 +1,14 @@
 import { ReactElement } from "react";
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/CreativeAgency/common/Breadcrumb";
-import AboutSection from "@/components/CreativeAgency/AboutSection";
 import VideoSection from "@/components/CreativeAgency/About/VideoSection";
-import BrandSection from "@/components/CreativeAgency/BrandSection";
-import TeamsSection from "@/components/CreativeAgency/TeamSection";
-import TextSliderSection from "@/components/CreativeAgency/TextSliderSection";
-import BlogSection from "@/components/CreativeAgency/BlogSection";
 import Footer from "@/components/CreativeAgency/Footer";
 import Header from "@/components/CreativeAgency/Header";
 
-// component data
-import aboutData from "@/constant/CreativeAgency/about";
 import videoData from "@/constant/CreativeAgency/About/video";
-import brandData from "@/constant/CreativeAgency/brands";
-import teamData from "@/constant/CreativeAgency/teams";
-import textSliderData from "@/constant/CreativeAgency/textSlider";
-import blogData from "@/constant/CreativeAgency/blog";
+import AboutInteliio from "@/components/CreativeAgency/AboutInteliio";
+import ContactSection from "@/components/CreativeAgency/Contact/ContactSection";
+import contactData from "@/constant/CreativeAgency/Contact/contact";
 
 export const metadata: Metadata = {
   title: "About Us || Averto - Creative Digital Agency NextJS Template",
@@ -57,12 +49,9 @@ const AboutPage = (): ReactElement => {
 
       <main>
         <Breadcrumb title="ABOUT US" pageName="ABOUT US" />
-        <AboutSection type="v2" data={aboutData} />
+        <AboutInteliio />
         <VideoSection data={videoData} />
-        <BrandSection data={brandData} />
-        <TeamsSection data={teamData} />
-        <TextSliderSection data={textSliderData} />
-        <BlogSection data={blogData} />
+        <ContactSection data={contactData} />
       </main>
       <Footer />
     </div>

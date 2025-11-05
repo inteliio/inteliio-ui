@@ -4,10 +4,10 @@ export interface MenuData {
   children?: MenuData[];
 }
 
-export interface HeaderData{
-  logo:string;
-  offcanvasIcon:string;
-  menu:MenuData[];
+export interface HeaderData {
+  logo: string;
+  offcanvasIcon: string;
+  menu: MenuData[];
 }
 
 const headerData = {
@@ -17,7 +17,7 @@ const headerData = {
     {
       label: "Home",
       children: [
-        { label: "Creative Agency", href: "/creative-agency" },
+        { label: "Creative Agency", href: "/" },
         { label: "Design Agency", href: "/design-agency" },
         { label: "Digital Agency", href: "/digital-agency" },
         { label: "AI Agency", href: "/ai-agency" },

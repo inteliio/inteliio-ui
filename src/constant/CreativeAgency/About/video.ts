@@ -4,9 +4,9 @@ export interface IVideoData {
   title: string;
 }
 const videoData: IVideoData = {
-  videoUrl: '/videos/Business_People.mp4',
-  subtitle: 'as a creative studio',
-  title: 'We specialize in transforming bold ideas into captivating visual experiences.'
+  videoUrl: "/videos/how_we_work.mp4",
+  subtitle: "as a creative studio",
+  title: "We specialize in transforming bold ideas into captivating visual experiences.",
 };
 
 export default videoData;

@@ -14,7 +14,7 @@ const FooterOne = () => {
       <div className="cta-area-2">
         <div className="container">
           <div className="cta-area-2-inner">
-            <Link href="/creative-agency/contact">
+            <Link href="/contact">
               <div className="section-header">
                 <div className="section-title-wrapper">
                   <div className="title-wrapper fade-anim">
@@ -59,14 +59,11 @@ const FooterOne = () => {
                   </ul>
                 </div>
                 <div className="text-wrapper">
-                  <p className="text">We place great emphasis on providing designers, artists, and brands with templates that elevates their visual communication.</p>
+                  <p className="text">Your partner for modern web development.</p>
                 </div>
                 <div className="social-links">
-                  <Link href="#">
-                    <i className="fa-brands fa-facebook-f"></i>
-                  </Link>
-                  <Link href="#">
-                    <i className="fa-brands fa-behance"></i>
+                  <Link href="https://www.instagram.com/inteliio" target="_blank" rel="noopener noreferrer" prefetch={false}>
+                    <i className="fa-brands fa-instagram"></i>
                   </Link>
                   <Link href="#">
                     <i className="fa-brands fa-linkedin-in"></i>
@@ -81,20 +78,17 @@ const FooterOne = () => {
         <div className="container">
           <div className="copyright-area-inner">
             <div className="copyright-text">
-              <p className="text">
-                Design & Developed by&nbsp;
-                <Link href="https://themeforest.net/user/pixavation">Pixavation</Link>
-              </p>
+              <p className="text">© 2025 Inteliio. All rights reserved. Powered by inteliio.</p>
             </div>
             <ul className="copyright-nav-list">
               <li>
-                <Link href="#">License</Link>
+                <Link href="#">Policy</Link>
               </li>
               <li>
-                <Link href="#">Customize</Link>
+                <Link href="creative-agency/faq">FAQ</Link>
               </li>
               <li>
-                <Link href="#">Journals</Link>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </div>
