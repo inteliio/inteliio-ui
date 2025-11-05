@@ -1,38 +1,36 @@
-import { ReactElement } from "react";
 import { Metadata } from "next";
+import { ReactElement } from "react";
 import Breadcrumb from "@/components/CreativeAgency/common/Breadcrumb";
-import WorkSection from "@/components/CreativeAgency/WorkSection";
+import WorkSection from "@/components/CreativeAgency/WorkTwoSection";
 import Footer from "@/components/CreativeAgency/Footer";
 import Header from "@/components/CreativeAgency/Header";
 
 // all data
-import workData from "@/constant/CreativeAgency/work";
-import SmoothScroll from "@/components/CreativeAgency/Animation/SmoothScroll";
+import workData from "@/constant/CreativeAgency/workTwo";
 
 export const metadata: Metadata = {
-  title: "Portfolio || Averto - Creative Digital Agency NextJS Template",
-  description: "Showcase your creative work and projects with the Averto Portfolio template. Designed to highlight your skills, case studies, and achievements with a modern, responsive, and SEO-friendly Next.js layout.",
+  title: "Portfolio Grid || Averto - Creative Digital Agency NextJS Template",
+  description: "Showcase your projects in a clean and organized grid layout with the Averto Portfolio Grid template. Designed for creative professionals to display work with a modern, responsive, and SEO-friendly Next.js structure.",
   keywords: [
-    "Averto portfolio page",
-    "NextJS portfolio template",
-    "creative portfolio website",
-    "project showcase",
-    "responsive portfolio design",
-    "SEO optimized portfolio",
-    "digital agency portfolio",
-    "startup portfolio",
-    "professional portfolio layout",
-    "case studies showcase",
+    "Averto portfolio grid",
+    "NextJS portfolio grid template",
+    "creative portfolio grid",
+    "responsive portfolio layout",
+    "SEO optimized portfolio grid",
+    "digital agency portfolio grid",
+    "startup portfolio showcase",
+    "project gallery",
+    "professional portfolio grid",
+    "modern portfolio display",
     "frontend developer portfolio",
-    "creative work display",
-    "NextJS personal portfolio",
-    "modern portfolio website",
-    "portfolio landing page",
+    "creative work grid",
+    "NextJS project grid",
+    "grid based portfolio",
   ],
   creator: "PixaVation",
   other: {
     developer: "PixaVation",
-    section: "Portfolio Page",
+    section: "Portfolio Grid Page",
   },
 };
 
@@ -40,13 +38,12 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
-      <SmoothScroll>
-        <main>
-          <Breadcrumb title="PORTFOLIO" pageName="PORTFOLIO" />
-          <WorkSection pageInner={true} data={workData} />
-        </main>
-        <Footer />
-      </SmoothScroll>
+
+      <main>
+        <Breadcrumb title="OUR WORK" subTitle="Portfolio Grid" pageName="OUR WORK" />
+        <WorkSection pageInner={true} type={7} data={workData} />
+      </main>
+      <Footer />
     </div>
   );
 };

@@ -47,7 +47,7 @@ const headerData = {
           label: "Portfolio Pages",
           children: [
             { label: "Portfolio", href: "/design-agency/portfolio" },
-            { label: "Portfolio grid", href: "/design-agency/portfolio-grid" },
+            { label: "Portfolio grid", href: "/design-agency/portfolio" },
             { label: "Portfolio Slider", href: "/design-agency/portfolio-slider" },
             { label: "Portfolio Details", href: "/design-agency/portfolio-details" },
           ],

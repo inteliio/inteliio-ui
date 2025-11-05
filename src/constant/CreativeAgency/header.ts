@@ -15,7 +15,7 @@ const header: HeaderData = {
   menu: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
-    { label: "Our Work", href: "/portfolio-grid" },
+    { label: "Our Work", href: "/portfolio" },
     {
       label: "Company",
       children: [

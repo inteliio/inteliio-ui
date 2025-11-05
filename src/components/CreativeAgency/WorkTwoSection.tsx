@@ -117,7 +117,7 @@ const WorkSection: React.FC<WorkProps> = ({ pageInnerSlider, type = false, data:
                           </span>
                         ))}
                       </div>
-                      <Link href={item?.link || "#"} target="_blank" rel="noopener noreferrer">
+                      <Link href={`/portfolio/${item?.id}`}>
                         <Image
                           src={item?.image}
                           alt={item?.title || "Project image"}

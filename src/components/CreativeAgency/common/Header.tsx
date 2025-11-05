@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Sidebar from "@/components/AiAgency/SideBar/SideBar";
+import Sidebar from "@/components/SideBar";
 import React, { ReactNode, useState } from "react";
 import useStickyHeader from "@/Hook/useStickyHeader";
 
@@ -63,7 +63,7 @@ const headerData: HeaderData = {
           title: "Portfolio Pages",
           children: [
             { title: "Portfolio", href: "/creative-agency/portfolio" },
-            { title: "Portfolio Grid", href: "/creative-agency/portfolio-grid" },
+            { title: "Portfolio Grid", href: "/creative-agency/portfolio" },
             { title: "Portfolio Slider", href: "/creative-agency/portfolio-slider" },
             { title: "Portfolio Details", href: "/creative-agency/portfolio-details" },
           ],
@@ -105,14 +105,8 @@ const Header: React.FC = () => {
   const renderMenu = (items: MenuItem[]): ReactNode[] =>
     items?.map((item, i) => (
       <li key={i} className={item?.children ? "menu-item-has-children" : ""}>
-        {item?.href ? (
-          <Link href={item?.href}>{item?.title}</Link>
-        ) : (
-          <Link href="#0">{item?.title}</Link>
-        )}
-        {item?.children && (
-          <ul className="dp-menu">{renderMenu(item?.children)}</ul>
-        )}
+        {item?.href ? <Link href={item?.href}>{item?.title}</Link> : <Link href="#0">{item?.title}</Link>}
+        {item?.children && <ul className="dp-menu">{renderMenu(item?.children)}</ul>}
       </li>
     ));
 
@@ -125,11 +119,7 @@ const Header: React.FC = () => {
             <div className="header-area-2-inner">
               <div className="header-logo">
                 <Link href={headerData?.logo?.href}>
-                  <img
-                    src={headerData?.logo?.src}
-                    alt={headerData?.logo?.alt}
-                    className="normal-logo"
-                  />
+                  <img src={headerData?.logo?.src} alt={headerData?.logo?.alt} className="normal-logo" />
                 </Link>
               </div>
               <div className="header-nav pos-center">
@@ -139,22 +129,13 @@ const Header: React.FC = () => {
               </div>
               <div className="header-button">
                 <div className="t-btn-group">
-                  <Link
-                    href={headerData?.cta?.href}
-                    className="t-btn t-btn-circle"
-                  >
+                  <Link href={headerData?.cta?.href} className="t-btn t-btn-circle">
                     <i className="fa-solid fa-arrow-right"></i>
                   </Link>
-                  <Link
-                    href={headerData?.cta?.href}
-                    className="t-btn t-btn-primary"
-                  >
+                  <Link href={headerData?.cta?.href} className="t-btn t-btn-primary">
                     {headerData?.cta?.label}
                   </Link>
-                  <Link
-                    href={headerData?.cta?.href}
-                    className="t-btn t-btn-circle"
-                  >
+                  <Link href={headerData?.cta?.href} className="t-btn t-btn-circle">
                     <i className="fa-solid fa-arrow-right"></i>
                   </Link>
                 </div>

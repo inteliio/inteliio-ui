@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import sidebarData from "@/constant/AiAgency/sidebar/sidebarData";
-import NestedAccordion from "@/components/AiAgency/common/NestedAccordion";
 
 interface SideBarProps {
   isOpen: boolean;
@@ -11,11 +10,7 @@ interface SideBarProps {
   menuClass?: string;
 }
 
-const Sidebar = ({
-  isOpen,
-  handleSidebar,
-  menuClass = "d-xl-none",
-}: SideBarProps) => {
+const Sidebar = ({ isOpen, handleSidebar, menuClass = "d-xl-none" }: SideBarProps) => {
   return (
     <>
       <aside className="fix">
@@ -28,41 +23,26 @@ const Sidebar = ({
                   <img src={sidebarData.logo} alt="site logo" />
                 </Link>
               </div>
-              <button
-                id="side-info-close"
-                className="side-info-close"
-                onClick={handleSidebar}
-              >
+              <button id="side-info-close" className="side-info-close" onClick={handleSidebar}>
                 <i className={sidebarData.closeIcon}></i>
               </button>
             </div>
 
             {/* Mobile menu container (if needed for JS menu toggle logic) */}
-            <div className={`mobile-menu fix ${menuClass}`}>
-              <NestedAccordion items={sidebarData.menus} />
-            </div>
+            <div className={`mobile-menu fix ${menuClass}`}></div>
 
             {/* Info Box */}
             <div className="offset-info-box">
               <h2 className="title">{sidebarData?.title}</h2>
               <p className="text">{sidebarData?.description}</p>
               <div className="t-btn-group">
-                <Link
-                  className="t-btn t-btn-circle"
-                  href={sidebarData?.cta?.href}
-                >
+                <Link className="t-btn t-btn-circle" href={sidebarData?.cta?.href}>
                   <i className={sidebarData?.ctaIcon}></i>
                 </Link>
-                <Link
-                  className="t-btn t-btn-primary"
-                  href={sidebarData?.cta?.href}
-                >
+                <Link className="t-btn t-btn-primary" href={sidebarData?.cta?.href}>
                   {sidebarData?.cta?.text}
                 </Link>
-                <Link
-                  className="t-btn t-btn-circle"
-                  href={sidebarData?.cta?.href}
-                >
+                <Link className="t-btn t-btn-circle" href={sidebarData?.cta?.href}>
                   <i className={sidebarData?.ctaIcon}></i>
                 </Link>
               </div>
@@ -81,16 +61,12 @@ const Sidebar = ({
               <div className="contact-meta">
                 <div className="contact-item">
                   <span className="text">
-                    <Link href={sidebarData?.contact?.phone?.href}>
-                      {sidebarData?.contact?.phone?.text}
-                    </Link>
+                    <Link href={sidebarData?.contact?.phone?.href}>{sidebarData?.contact?.phone?.text}</Link>
                   </span>
                 </div>
                 <div className="contact-item">
                   <span className="text">
-                    <a href={sidebarData?.contact?.email?.href}>
-                      {sidebarData?.contact?.email?.text}
-                    </a>
+                    <a href={sidebarData?.contact?.email?.href}>{sidebarData?.contact?.email?.text}</a>
                   </span>
                 </div>
                 <div className="contact-item">
@@ -120,10 +96,7 @@ const Sidebar = ({
       </aside>
 
       {/* Overlay */}
-      <div
-        className={`offcanvas-overlay ${isOpen ? "overlay-open" : ""}`}
-        onClick={handleSidebar}
-      ></div>
+      <div className={`offcanvas-overlay ${isOpen ? "overlay-open" : ""}`} onClick={handleSidebar}></div>
     </>
   );
 };
