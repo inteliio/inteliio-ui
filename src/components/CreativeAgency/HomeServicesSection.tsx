@@ -81,7 +81,7 @@ const ServiceSection: React.FC<ServicesProps> = ({ data: servicesData, type }) =
                       </Link>
                     </div>
                     <div className="video">
-                      <video loop muted playsInline className="video_on_hover">
+                      <video loop muted playsInline preload="metadata" className="video_on_hover" poster={service.video}>
                         <source src={service.video} type="video/mp4" />
                       </video>
                     </div>
