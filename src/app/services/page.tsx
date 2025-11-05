@@ -9,8 +9,8 @@ import Header from "@/components/CreativeAgency/Header";
 
 // all data
 import processData from "@/constant/CreativeAgency/process";
-import serviceData from "@/constant/MarketingAgency/service";
 import chooseUsData from "@/constant/CreativeAgency/common/choose-us";
+import serviceData from "@/constant/@inteliio/service";
 
 export const metadata: Metadata = {
   title: "Services || Averto - Creative Digital Agency NextJS Template",

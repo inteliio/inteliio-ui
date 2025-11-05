@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import sidebarData from "@/constant/AiAgency/sidebar/sidebarData";
+import sidebarData from "@/constant/@inteliio/sidebarData";
 
 interface SideBarProps {
   isOpen: boolean;

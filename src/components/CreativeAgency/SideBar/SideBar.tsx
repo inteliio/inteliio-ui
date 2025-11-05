@@ -2,9 +2,9 @@
 
 import React from "react";
 import Link from "next/link";
-import sidebarData from "@/constant/CreativeAgency/sidebar/sidebarData";
 import NestedAccordion from "@/components/CreativeAgency/common/NestedAccordion";
 import Image from "next/image";
+import sidebarData from "@/constant/@inteliio/sidebarData";
 
 interface SideBarProps {
   isOpen: boolean;
