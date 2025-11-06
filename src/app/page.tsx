@@ -19,32 +19,34 @@ import workData from "@/constant/CreativeAgency/work";
 import testimonialsData from "@/constant/CreativeAgency/brands";
 import testimonialData from "@/constant/CreativeAgency/testimonial";
 import SmoothScroll from "@/components/CreativeAgency/Animation/SmoothScroll";
+import PortfolioSliderSection from "@/components/CreativeAgency/PortfolioDetails/PortfolioSliderSection";
+import portfolioSliderData from "@/constant/CreativeAgency/PortfolioDetails/portfolio-data";
 
 export const metadata: Metadata = {
-  title: "Creative Agency || Averto - Creative Digital Agency NextJS Template",
-  description: "Welcome to Averto Creative Agency template — a stylish and modern Next.js homepage designed for creative agencies. Showcasing portfolio, services, team, and innovative projects with performance and SEO in mind.",
+  title: "Creative Company || Inteliio - Creative Digital Company NextJS Template",
+  description: "Welcome to Inteliio Creative Company template — a stylish and modern Next.js homepage designed for creative agencies. Showcasing portfolio, services, team, and innovative projects with performance and SEO in mind.",
   keywords: [
-    "Averto creative agency",
-    "NextJS creative agency template",
-    "creative agency homepage",
-    "modern agency website",
+    " Inteliio creative agency",
+    "NextJS creative company template",
+    "creative company homepage",
+    "modern company website",
     "portfolio showcase",
     "creative services",
-    "digital agency template",
+    "digital company template",
     "NextJS startup template",
-    "responsive agency website",
-    "SEO optimized agency site",
+    "responsive company website",
+    "SEO optimized company site",
     "agency team page",
     "design portfolio",
     "creative project showcase",
     "frontend development",
     "agency landing page",
-    "professional agency template",
+    "professional company template",
   ],
   creator: "PixaVation",
   other: {
     developer: "PixaVation",
-    section: "Creative Agency Page",
+    section: "Creative Company Page",
   },
 };
 
@@ -61,6 +63,7 @@ const CreativeAgencyPage = (): ReactElement => {
           <BrandSection data={testimonialsData} />
           <ProcessSection data={processData} />
           <Testimonial data={testimonialData} />
+          <PortfolioSliderSection data={portfolioSliderData} />
         </main>
         <Footer />
       </SmoothScroll>

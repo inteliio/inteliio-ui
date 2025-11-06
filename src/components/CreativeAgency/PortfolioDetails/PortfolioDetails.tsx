@@ -1,13 +1,12 @@
 import React from "react";
 import { IPortfolioDetailsData } from "@/constant/CreativeAgency/PortfolioDetails/portfolio-details-data";
+import Link from "next/link";
 
 interface PortfolioProps {
   data: IPortfolioDetailsData;
 }
 
-const PortfolioDetails: React.FC<PortfolioProps> = ({
-  data: portfolioDetailsData,
-}) => {
+const PortfolioDetails: React.FC<PortfolioProps> = ({ data: portfolioDetailsData }) => {
   const { meta, overview, problems, solutions } = portfolioDetailsData;
 
   return (
@@ -22,7 +21,13 @@ const PortfolioDetails: React.FC<PortfolioProps> = ({
                   {meta?.map((item, index) => (
                     <div className="meta-item" key={index}>
                       <p className="title">{item?.title}</p>
-                      <p className="text">{item?.text}</p>
+                      {item.link ? (
+                        <Link target="_blank" className="text" href={item?.link}>
+                          {item?.link}
+                        </Link>
+                      ) : (
+                        <p className="text">{item?.text}</p>
+                      )}
                     </div>
                   ))}
                 </div>

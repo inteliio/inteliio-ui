@@ -105,7 +105,7 @@ const sidebar: SidebarData = {
   gallery: ["/assets/imgs/gallery/image-48.webp", "/assets/imgs/gallery/image-49.webp", "/assets/imgs/gallery/image-50.webp", "/assets/imgs/gallery/image-51.webp"],
   contact: {
     phone: { text: "+2230 6965 119", href: "tel:+22306965119" },
-    email: { text: "averto@gmail.com", href: "mailto:averto@gmail.com" },
+    email: { text: "inteliio@gmail.com", href: "mailto:inteliio@gmail.com" },
     address: "Avenue de Roma 1588, Lisboa",
   },
   social: [

@@ -13,16 +13,16 @@ import chooseUsData from "@/constant/CreativeAgency/common/choose-us";
 import serviceData from "@/constant/@inteliio/service";
 
 export const metadata: Metadata = {
-  title: "Services || Averto - Creative Digital Agency NextJS Template",
-  description: "Showcase your agency’s wide range of services with the Averto Services template. Designed to present offerings clearly and attractively, optimized for performance and SEO in Next.js.",
+  title: "Services || Inteliio - Creative Digital Company NextJS Template",
+  description: "Showcase your agency’s wide range of services with the Inteliio Services template. Designed to present offerings clearly and attractively, optimized for performance and SEO in Next.js.",
   keywords: [
-    "Averto services page",
+    " Inteliio services page",
     "NextJS services template",
     "agency services overview",
     "service offerings",
     "responsive services layout",
     "SEO optimized services page",
-    "digital agency services",
+    "digital company services",
     "startup services showcase",
     "professional service presentation",
     "service features",

@@ -25,6 +25,18 @@ const services: ServiceData[] = [
     video: "/videos/creative_design.mp4",
   },
   {
+    number: "/001",
+    title: "E-commerce",
+    link: "/service-details",
+    video: "/videos/ui_ux_solutions.mp4",
+  },
+  {
+    number: "/001",
+    title: "Marketing Websites",
+    link: "/service-details",
+    video: "/videos/creative_design.mp4",
+  },
+  {
     number: "/004",
     title: "UI-UX Solutions",
     link: "/service-details",

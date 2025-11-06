@@ -17,16 +17,16 @@ import textSliderData from "@/constant/CreativeAgency/textSlider";
 import faqData from "@/constant/CreativeAgency/faq/faq-data";
 
 export const metadata: Metadata = {
-  title: "Service Details || Averto - Creative Digital Agency NextJS Template",
-  description: "Explore detailed information about our services with the Averto Service Details template. Perfect for showcasing features, benefits, and case studies of your agency's offerings with SEO-friendly design.",
+  title: "Service Details || Inteliio - Creative Digital Company NextJS Template",
+  description: "Explore detailed information about our services with the Inteliio Service Details template. Perfect for showcasing features, benefits, and case studies of your agency's offerings with SEO-friendly design.",
   keywords: [
-    "Averto service details",
+    " Inteliio service details",
     "NextJS service details template",
     "agency service page",
     "service features showcase",
     "responsive service details",
     "SEO optimized service page",
-    "digital agency services",
+    "digital company services",
     "startup service details",
     "professional service layout",
     "service benefits",

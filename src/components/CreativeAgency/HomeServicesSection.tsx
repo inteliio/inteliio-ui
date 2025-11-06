@@ -41,7 +41,7 @@ const ServiceSection: React.FC<ServicesProps> = ({ data: servicesData, type }) =
                 <span className="section-subtitle">( Our Services )</span>
               </div>
               <div className="title-wrapper">
-                <h2 className="section-title">Our Expertise in Action</h2>
+                <h2 className="section-title">Our Expertise</h2>
               </div>
             </div>
             <div className="btn-wrapper fade-anim" suppressHydrationWarning={true}>

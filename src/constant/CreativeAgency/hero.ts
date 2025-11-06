@@ -19,7 +19,7 @@ const hero: HeroData = {
   title: "Unlock the Future of",
   highlightedText: "Software",
   subtitle: "- Start with inteliio.",
-  description: "inteliio, a digital agency crafted by a dedicated team of creatives champions the essence of simplicity and elegance.",
+  description: "We turn your ideas into digital products. Focused on clarity, performance, and simplicity. Let’s bring your vision to life.",
   cta: {
     text: "Let’s Connect",
     href: "/contact",

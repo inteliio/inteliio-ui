@@ -12,16 +12,16 @@ import chooseUsData from "@/constant/CreativeAgency/common/choose-us";
 import Header from "@/components/CreativeAgency/Header";
 
 export const metadata: Metadata = {
-  title: "Contact || Averto - Creative Digital Agency NextJS Template",
-  description: "Get in touch with the Averto team. Whether you have questions, project inquiries, or want to collaborate, our contact page makes it easy to connect.",
+  title: "Contact || Inteliio - Creative Digital Company NextJS Template",
+  description: "Get in touch with the Inteliio team. Whether you have questions, project inquiries, or want to collaborate, our contact page makes it easy to connect.",
   keywords: [
-    "Averto contact page",
+    " Inteliio contact page",
     "NextJS contact template",
     "agency contact",
     "business contact page",
     "get in touch",
     "contact form NextJS",
-    "digital agency contact",
+    "digital company contact",
     "startup contact page",
     "professional contact page",
     "customer support",

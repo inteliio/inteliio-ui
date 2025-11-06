@@ -9,15 +9,15 @@ import Header from "@/components/CreativeAgency/Header";
 import workData from "@/constant/CreativeAgency/workTwo";
 
 export const metadata: Metadata = {
-  title: "Portfolio Grid || Averto - Creative Digital Agency NextJS Template",
-  description: "Showcase your projects in a clean and organized grid layout with the Averto Portfolio Grid template. Designed for creative professionals to display work with a modern, responsive, and SEO-friendly Next.js structure.",
+  title: "Portfolio Grid || Inteliio - Creative Digital Company NextJS Template",
+  description: "Showcase your projects in a clean and organized grid layout with the Inteliio Portfolio Grid template. Designed for creative professionals to display work with a modern, responsive, and SEO-friendly Next.js structure.",
   keywords: [
-    "Averto portfolio grid",
+    " Inteliio portfolio grid",
     "NextJS portfolio grid template",
     "creative portfolio grid",
     "responsive portfolio layout",
     "SEO optimized portfolio grid",
-    "digital agency portfolio grid",
+    "digital company portfolio grid",
     "startup portfolio showcase",
     "project gallery",
     "professional portfolio grid",

@@ -11,17 +11,17 @@ import ContactSection from "@/components/CreativeAgency/Contact/ContactSection";
 import contactData from "@/constant/CreativeAgency/Contact/contact";
 
 export const metadata: Metadata = {
-  title: "About Us || Averto - Creative Digital Agency NextJS Template",
-  description: "Explore the About Us page of Averto – a modern, high-performance agency template built with Next.js. Meet the team, learn our mission, and discover why Averto is trusted by creative professionals and businesses.",
+  title: "About Us || Inteliio - Creative Digital Company NextJS Template",
+  description: "Explore the About Us page of Inteliio – a modern, high-performance company template built with Next.js. Meet the team, learn our mission, and discover why Inteliio is trusted by creative professionals and businesses.",
   keywords: [
-    "Averto About Us",
+    " Inteliio About Us",
     "NextJS about page",
     "agency template",
     "digital agency",
     "creative team template",
     "business website template",
     "responsive NextJS template",
-    "modern agency design",
+    "modern company design",
     "SEO friendly template",
     "professional web agency",
     "agency team page",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "fast NextJS website",
     "customizable template",
     "about page design",
-    "Averto template",
+    " Inteliio template",
   ],
   creator: "PixaVation",
   other: {

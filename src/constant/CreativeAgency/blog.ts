@@ -17,7 +17,7 @@ export interface BlogData {
   blogs: Blog[];
 }
 
-const blogData:BlogData = {
+const blogData: BlogData = {
   sectionTitle: {
     subtitle: "Our Insights",
     title: "Press Releases",
@@ -34,18 +34,18 @@ const blogData:BlogData = {
     {
       id: 2,
       tag: "Customer Experience",
-      title: "How Averto Merges Creativity with Strategy and Innovations",
+      title: "How  Inteliio Merges Creativity with Strategy and Innovations",
       date: "July 22, 2024",
       image: "/assets/imgs/blog/blog-8.webp",
-      slug: "how-averto-merges-creativity-with-strategy-and-innovations",
+      slug: "how-inteliio-merges-creativity-with-strategy-and-innovations",
     },
     {
       id: 3,
       tag: "Branding Strategy",
-      title: "How Averto Creates Meaningful Brand Identity",
+      title: "How  Inteliio Creates Meaningful Brand Identity",
       date: "July 15, 2024",
       image: "/assets/imgs/blog/blog-9.webp",
-      slug: "how-averto-creates-meaningful-brand-identity",
+      slug: "how-inteliio-creates-meaningful-brand-identity",
     },
   ],
 };

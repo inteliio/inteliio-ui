@@ -11,14 +11,14 @@ import contactData from "@/constant/CreativeAgency/Contact/contact";
 import faqData from "@/constant/CreativeAgency/faq/faq-data";
 
 export const metadata: Metadata = {
-  title: "FAQ || Averto - Creative Digital Agency NextJS Template",
-  description: "Find answers to frequently asked questions about Averto, our Next.js templates, and services. Get quick support and clear information to help you make the most of our agency solutions.",
+  title: "FAQ || Inteliio - Creative Digital Company NextJS Template",
+  description: "Find answers to frequently asked questions about inteliio, our Next.js templates, and services. Get quick support and clear information to help you make the most of our company solutions.",
   keywords: [
-    "Averto FAQ page",
+    " Inteliio FAQ page",
     "NextJS FAQ template",
     "agency frequently asked questions",
     "customer support FAQ",
-    "digital agency FAQ",
+    "digital company FAQ",
     "startup FAQ page",
     "common questions",
     "template support",

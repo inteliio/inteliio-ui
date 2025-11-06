@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const ContactMetaSection:React.FC = () => {
+const ContactMetaSection: React.FC = () => {
   return (
     <div className="contact-meta-area">
       <div className="container">
@@ -17,12 +17,10 @@ const ContactMetaSection:React.FC = () => {
                   <div className="meta-list">
                     <ul>
                       <li>
-                        <Link href="mailto:info@averto.com">info@averto.com</Link>
+                        <Link href="mailto:info@inteliio.com">info@inteliio.com</Link>
                       </li>
                       <li>
-                        <Link href="mailto:example@avertogmail.com">
-                          example@avertogmail.com
-                        </Link>
+                        <Link href="mailto:example@inteliiogmail.com">example@inteliiogmail.com</Link>
                       </li>
                     </ul>
                   </div>

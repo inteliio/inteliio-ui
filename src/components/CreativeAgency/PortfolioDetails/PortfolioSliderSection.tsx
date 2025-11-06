@@ -1,17 +1,15 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { IPortfolioSliderData } from "@/constant/CreativeAgency/PortfolioDetails/portfolio-data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
+import Image from "next/image";
 
 interface IPortfolioSliderProps {
   data: IPortfolioSliderData[];
 }
-const PortfolioSliderSection: React.FC<IPortfolioSliderProps> = ({
-  data: portfolioSliderData,
-}) => {
+const PortfolioSliderSection: React.FC<IPortfolioSliderProps> = ({ data: portfolioSliderData }) => {
   return (
     <section className="work-area-9">
       <div className="container">
@@ -19,7 +17,7 @@ const PortfolioSliderSection: React.FC<IPortfolioSliderProps> = ({
           <div className="section-header">
             <div className="section-title-wrapper">
               <div className="title-wrapper fade-anim">
-                <h2 className="section-title">More Projects</h2>
+                <h2 className="section-title">We Speak Our Languages</h2>
               </div>
             </div>
             <div className="slide-nav fade-anim">
@@ -49,45 +47,28 @@ const PortfolioSliderSection: React.FC<IPortfolioSliderProps> = ({
                   nextEl: ".work-button-next",
                 }}
                 breakpoints={{
-                  576: { slidesPerView: 1 },
-                  768: { slidesPerView: 2 },
-                  992: { slidesPerView: 2 },
-                  1201: { slidesPerView: 3 },
-                  1367: { slidesPerView: 3 },
+                  300: { slidesPerView: 2 },
+                  576: { slidesPerView: 3 },
+                  768: { slidesPerView: 3 },
+                  992: { slidesPerView: 4 },
+                  1201: { slidesPerView: 5 },
+                  1367: { slidesPerView: 5 },
                 }}
-                className="work-slider"
-              >
-                {portfolioSliderData?.map(
-                  (project: IPortfolioSliderData, index: number) => (
-                    <SwiperSlide key={index}>
-                      <div className="work-box-9">
-                        <div className="thumb">
-                          <div className="meta">
-                            {project?.tags?.map(
-                              (tag: string, tagIndex: number) => (
-                                <Link
-                                  className="tag"
-                                  href={project?.link}
-                                  key={tagIndex}
-                                >
-                                  {tag}
-                                </Link>
-                              )
-                            )}
-                          </div>
-                          <Link href={project?.link}>
-                            <img src={project?.image} alt="project image" />
-                          </Link>
-                          <div className="content">
-                            <h3 className="title">
-                              <Link href={project?.link}>{project?.title}</Link>
-                            </h3>
-                          </div>
+                className="work-slider">
+                {portfolioSliderData?.map((project: IPortfolioSliderData, index: number) => (
+                  <SwiperSlide key={index}>
+                    <div className="work-box-9">
+                      <div className="thumb">
+                        <div>
+                          <Image src={project?.image} alt="project image" width={500} height={500} style={{ objectFit: "contain" }} />
+                        </div>
+                        <div className="content">
+                          <h3 className="title">{project?.title}</h3>
                         </div>
                       </div>
-                    </SwiperSlide>
-                  )
-                )}
+                    </div>
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
           </div>

@@ -24,13 +24,12 @@ export interface IContact {
 const contactData: IContact = {
   subtitle: "Let’s connect",
   title: "Let’s work together",
-  description:
-    "People know what an FAQ is, so make that your page title. Don’t over complicate thing have calling it’s good to know or more info.",
+  description: "People know what an FAQ is, so make that your page title. Don’t over complicate thing have calling it’s good to know or more info.",
   contactInfo: [
     {
       icon: "/assets/imgs/icon/icon-17.webp",
-      label: "example@avertog.com",
-      link: "mailto:example@avertog.com",
+      label: "example@inteliiog.com",
+      link: "mailto:example@inteliiog.com",
     },
     {
       icon: "/assets/imgs/icon/icon-18.webp",

@@ -30,8 +30,8 @@ import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "Averto - Creative Digital Agency NextJS Template",
-  description: "Averto is a modern and responsive Next.js template designed for agencies and businesses. Featuring a sleek design, fast performance, and SEO optimization, Averto provides a perfect foundation for building a high-quality website.",
+  title: " Inteliio - Creative Digital Company NextJS Template",
+  description: " Inteliio is a modern and responsive Next.js template designed for agencies and businesses. Featuring a sleek design, fast performance, and SEO optimization, Inteliio provides a perfect foundation for building a high-quality website.",
   keywords: [
     "NextJS template",
     "agency website template",
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
     "high-performance website template",
     "web development",
     "business template NextJS",
-    "Averto template",
-    "digital agency template",
+    " Inteliio template",
+    "digital company template",
     "corporate website template",
     "startup website template",
     "clean website design",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     "business landing page template",
     "professional web design template",
     "NextJS portfolio template",
-    "creative agency website template",
+    "creative company website template",
     "landing page template",
     "NextJS website themes",
     "responsive business templates",
