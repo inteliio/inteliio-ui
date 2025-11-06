@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Tab, Nav } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { ServiceData } from "@/constant/MarketingAgency/service";
+import { ServiceData } from "@/constant/@inteliio/service";
 
 interface ServiceProps {
   data: ServiceData;

@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { Metadata } from "next";
 import Breadcrumb from "@/components/CreativeAgency/common/Breadcrumb";
 import Header from "@/components/CreativeAgency/Header";
@@ -6,42 +5,10 @@ import Footer from "@/components/CreativeAgency/Footer";
 import PortfolioDetails from "@/components/CreativeAgency/PortfolioDetails/PortfolioDetails";
 import PortfolioSliderSection from "@/components/CreativeAgency/PortfolioDetails/PortfolioSliderSection";
 import portfolioSliderData from "@/constant/CreativeAgency/PortfolioDetails/portfolio-data";
-
 import workData, { IProject } from "@/constant/CreativeAgency/workTwo";
 
-// export const metadata: Metadata = {
-//   title: "Portfolio Details || Inteliio - Creative Digital Company NextJS Template",
-//   description: "Dive into detailed case studies and project insights with the Inteliio Portfolio Details template. Perfect for showcasing your creative process, technologies used, and impactful results with SEO and performance in mind.",
-//   keywords: [
-//     " Inteliio portfolio details",
-//     "NextJS portfolio details template",
-//     "project case study",
-//     "detailed portfolio page",
-//     "creative project insights",
-//     "responsive portfolio details",
-//     "SEO optimized project page",
-//     "digital company portfolio details",
-//     "startup project showcase",
-//     "professional portfolio layout",
-//     "frontend developer case study",
-//     "technology showcase",
-//     "creative process display",
-//     "modern portfolio details page",
-//   ],
-//   creator: "PixaVation",
-//   other: {
-//     developer: "PixaVation",
-//     section: "Portfolio Details Page",
-//   },
-// };
-
-interface IParams {
-  params: {
-    id: string;
-  };
-}
-
-export async function generateMetadata({ params }: IParams): Promise<Metadata> {
+// ✅ Generate metadata dynamically based on project
+export async function generateMetadata({ params }: any): Promise<Metadata> {
   const projectId = parseInt(params.id);
   const project = workData.projects.find((p) => p.id === projectId) as IProject;
 
@@ -79,30 +46,37 @@ export async function generateMetadata({ params }: IParams): Promise<Metadata> {
   };
 }
 
-const Home = ({ params }: IParams) => {
-  const { id } = params;
-  const projectId = parseInt(id);
-
-  console.log("id :", id);
-  console.log("projectId :", projectId);
-
+// ✅ Correct page component (App Router expects a default function)
+export default function Page({ params }: any) {
+  const projectId = parseInt(params.id);
   const project = workData.projects.find((p) => p.id === projectId) as IProject;
 
-  console.log("project :", project);
-
-  if (!project?.projectDetails) return;
-  else {
+  // ✅ Always return valid JSX
+  if (!project?.projectDetails) {
     return (
       <div className="body-wrapper body-inner-page">
         <Header />
         <main>
-          <Breadcrumb title="PROJECT DETAILS" pageName="PROJECT DETAILS" />
-          <PortfolioDetails data={project?.projectDetails} />
-          <PortfolioSliderSection data={portfolioSliderData} />
+          <Breadcrumb title="PROJECT NOT FOUND" pageName="PROJECT DETAILS" />
+          <div className="text-center py-40">
+            <h2>Project not found</h2>
+            <p>The requested project could not be found.</p>
+          </div>
         </main>
         <Footer />
       </div>
     );
   }
-};
-export default Home;
+
+  return (
+    <div className="body-wrapper body-inner-page">
+      <Header />
+      <main>
+        <Breadcrumb title={project.title} pageName="PROJECT DETAILS" />
+        <PortfolioDetails data={project.projectDetails} />
+        <PortfolioSliderSection data={portfolioSliderData} />
+      </main>
+      <Footer />
+    </div>
+  );
+}
