@@ -53,14 +53,14 @@ const workData: WorkData = {
   projects: [
     {
       id: 1,
-      title: "Focalstudio – Interior Design Website",
+      title: "Focalstudio",
       tags: ["WEB DESIGN", "BRANDING", "SEO"],
       image: "/assets/inteliio/projects/focalStudio/focalStudio.png",
       link: "https://focalstudio.mk",
       projectDetails: {
         meta: [
           { title: "Client", text: "Focalstudio" },
-          { title: "Website", link: "https://codelab.com.mk" },
+          { title: "Website", link: "https://focalstudio.mk" },
           { title: "Project", text: "Website Design & Development" },
           { title: "Duration", text: "10.10.2025 - 03.11.2025" },
           { title: "Company Size", text: "1-5" },
@@ -71,7 +71,7 @@ const workData: WorkData = {
             `Focalstudio is an interior design and architecture studio based in Skopje, dedicated to creating timeless, functional, and refined spaces. Their work emphasizes balance, light, and texture — bringing harmony between form and function.`,
             `To strengthen their brand presence and showcase their growing portfolio, we developed their first official website from the ground up. The goal was to craft a digital identity that truly reflects their artistic vision while ensuring technical excellence through modern web technologies, responsive layouts, and SEO best practices.`,
           ],
-          images: ["/focal/images/gallery/overview-1.webp", "/focal/images/gallery/overview-2.webp", "/focal/images/gallery/overview-3.webp", "/focal/images/gallery/overview-4.webp"],
+          images: ["/assets/inteliio/projects/focalStudio/laptop.jpg", "/assets/inteliio/projects/focalStudio/mobile.png", "/assets/inteliio/projects/focalStudio/tablet.png"],
         },
         problems: {
           title: "Challenges",
@@ -79,7 +79,7 @@ const workData: WorkData = {
             `Since Focalstudio previously had no online presence, the main challenge was to establish a brand-new digital ecosystem that visually communicates their architectural identity. The goal was not only to present their projects attractively but also to position the brand as a trusted creative studio in the competitive design market.`,
             `We needed to design an intuitive structure for future scalability — from portfolio presentation to service descriptions — while keeping the website lightweight, fast, and optimized for discovery on search engines.`,
           ],
-          images: ["/focal/images/gallery/challenge-1.webp", "/focal/images/gallery/challenge-2.webp"],
+          images: [],
         },
         solutions: {
           title: "Solutions",
